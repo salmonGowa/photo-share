@@ -1,7 +1,7 @@
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, UserButton } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
     <html lang="en">
       <body className={inter.className}>
-        
+        <UserButton/>
         {children}
 
       </body>
